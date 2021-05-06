@@ -1,6 +1,7 @@
 :root {
   --logo-blue-color: rgb(43, 50, 92);
   --logo-gold-color: rgb(233, 212, 124);
+  --logo-orange-color: rgb(235 146 99);
 }
 
 body {
@@ -80,23 +81,26 @@ a:hover {
 .grid-container {
   display: grid;
   grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [end-col];
-  grid-template-rows: [row-1] 3fr [row-2] 1fr [row-3] 1fr [row-4] /*1fr [row-5] 1fr [row-6] 1fr [end-row]*/;
+  grid-template-rows: [row-1] 3fr [row-2] 1fr [row-3] /*1fr [row-4] 1fr [row-5] 1fr [row-6] 1fr [end-row]*/;
 }
 
 .link-btn {
   font-size: 20px;
-  margin: 10px 0;
+  margin: 10px 15px 10px 0;
   background-color: var(--logo-blue-color);
   border: 3px solid var(--logo-blue-color);
   color: var(--logo-gold-color);
   padding: 15px;
   border-radius: 30px;
   display: inline-block;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 1s ease;
 }
 
 .link-btn:hover {
   background: transparent;  
   color: var(--logo-blue-color);
+  box-shadow: 0px 15px 20px rgba(43, 50, 92, 0.15);
+  transform: translateY(-7px);
 }
 
 /* Scrollbar */
@@ -139,7 +143,7 @@ a:hover {
 
 /* Footer */
 .footer-container {
-  background-color: var(--logo-gold-color);
+  background-color: var(--logo-orange-color);
   height: 80px;
   display: flex;
   flex-direction: row;
