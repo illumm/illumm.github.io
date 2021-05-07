@@ -17,6 +17,7 @@ h1 {
 
 h2 {
   font-size: 35px;
+  margin: 0;
 }
 
 a {
@@ -25,7 +26,10 @@ a {
 }
 
 p {
+  font-size: 18px;
   padding: 15px;
+  width: 75%;
+  line-height: 1.5em;
 }
 
 a:hover {
@@ -75,7 +79,19 @@ a:hover {
 
 /* Page content */
 .page-container {
-  padding: 50px 100px 100px;  
+  padding: 50px 100px;  
+}
+
+.page-title {
+  margin-bottom: 2em;
+}
+
+.section-title {
+  margin-bottom: 2em;
+}
+
+.page-section {
+  margin-top: 1em;
 }
 
 .grid-container {
@@ -101,6 +117,108 @@ a:hover {
   color: var(--logo-blue-color);
   box-shadow: 0px 15px 20px rgba(43, 50, 92, 0.15);
   transform: translateY(-7px);
+}
+
+.link-btn-inverted {
+  font-size: 20px;
+  margin: 10px 15px 10px 0;
+  background: transparent;
+  border: 3px solid var(--logo-blue-color);
+  color: var(--logo-blue-color);
+  padding: 15px;
+  border-radius: 30px;
+  display: inline-block;
+  box-shadow: 0px 15px 20px rgba(43, 50, 92, 0.15);
+  transition: background-color 0.5s ease, color 0.5s ease, transform 1s ease;
+}
+
+.link-btn-inverted:hover {
+  background: var(--logo-blue-color);  
+  color: var(--logo-gold-color);
+  transform: translateY(-7px);
+}
+
+.link-arrow {
+  transition: transform 1s ease;
+}
+
+a:hover .link-arrow {
+  transform: translateX(3px);
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+.accordion details {
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion details > summary {
+  list-style-type: none;
+}
+
+.accordion  details > summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=")
+    no-repeat 50% 50% / 1em 1em;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: .5em;
+  transition: transform 1s ease;  
+}
+
+.accordion summary {
+  width: 100%;
+  padding-left: 30px;
+  font-size: 20px;
+  transition: color .25s ease;
+}
+
+.accordion p {
+  margin: 0;
+  padding-left: 30px;
+}
+
+.accordion summary:hover {
+  color: var(--logo-orange-color);
+}
+
+.accordion summary:focus {
+  outline: none;
+}
+
+.accordion details[open] summary:before {
+  transform: rotate(90deg);  
+}
+
+.accordion details[open] > summary {
+  color: var(--logo-orange-color);
+}
+
+/* .accordion details[open] {
+  padding: 1rem 2rem;
+} */
+
+.accordion details[open] > summary ~ * {
+  animation: open 1s ease;
+}
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Scrollbar */
@@ -150,7 +268,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 25px;
   margin-top: 5rem;
 }
 
@@ -197,6 +315,10 @@ a:hover {
   #toggle-btn {
     display: block;
     margin: 10px;
+  }
+
+  .accordion  details > summary::before {
+    margin-top: 0;
   }
 }
 
