@@ -12,7 +12,7 @@
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
 }
 
@@ -97,12 +97,17 @@ a:hover {
   font-family: 'Moon Time';
   font-size: 80px;
   margin-top: 0;
-  margin-bottom: .67em;
+  margin-bottom: .1em;
+}
+
+#mission-statement-block {
+  margin-bottom: 6em;
 }
 
 #mission-statement {
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Source Sans Pro', sans-serif; 
   font-size: 45px;
+  margin-bottom: .67em;
 }
 
 .section-title {
@@ -116,7 +121,7 @@ a:hover {
 .grid-container {
   display: grid;
   grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [end-col];
-  grid-template-rows: [row-1] 4fr [row-2] 1fr [row-3] /*1fr [row-4] 1fr [row-5] 1fr [row-6] 1fr [end-row]*/;
+  grid-template-rows: [row-1] 1.2fr [row-2] 1fr [row-3] /*1fr [row-4] 1fr [row-5] 1fr [row-6] 1fr [end-row]*/;
 }
 
 .link-btn {
@@ -306,6 +311,10 @@ a:hover .link-arrow {
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 50px !important;
+  }
+
+  #mission-statement-block {
+    margin-bottom: 3.5em !important;
   }
 
   #mission-statement {
