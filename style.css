@@ -213,7 +213,7 @@ a:hover .link-arrow {
 }
 
 .accordion summary:hover {
-  color: var(--logo-orange-color);
+  color: var(--logo-gold-color);
 }
 
 .accordion summary:focus {
