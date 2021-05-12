@@ -33,7 +33,6 @@ a {
 p {
   font-size: 20px;
   padding: 15px;
-  width: 75%;
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 1em;
@@ -52,7 +51,9 @@ a:hover {
   justify-content: flex-end;
   align-items: center;
   padding: 0 50px;
-  margin-bottom: 3rem;
+  /* position: sticky;
+  top: 0; */
+  z-index: 1;
 }
 
 .nav-container .nav-link {
@@ -85,12 +86,18 @@ a:hover {
 }
 
 /* Page content */
-.page-container {
-  padding: 50px 100px;  
+.page-container { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-container > div {
+  flex-basis: 70%;
 }
 
 .page-title {
-  margin-bottom: 3em;  
+  margin-bottom: 2em;  
+  padding: 90px 100px 0;
 }
 
 .page-title h1 {
@@ -101,7 +108,38 @@ a:hover {
 }
 
 #mission-statement-block {
+  position: relative;
   margin-bottom: 6em;
+  flex-basis: 100%;
+}
+
+#mission-statement-block h1 {
+  width: 75%;
+}
+
+#mission-statement-block::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3em;
+  background: #f4eabe;
+}
+
+#mission-statmenet-block::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("images/wave.svg");
+  background-size: 100% 100%;
 }
 
 #mission-statement {
@@ -116,12 +154,9 @@ a:hover {
 
 .page-section {
   margin-bottom: 2em;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [end-col];
-  grid-template-rows: [row-1] 1.2fr [row-2] 1fr [row-3] /*1fr [row-4] 1fr [row-5] 1fr [row-6] 1fr [end-row]*/;
+  padding: 0 100px;
+  width: 75%;
+  display: block;
 }
 
 .link-btn {
@@ -137,7 +172,7 @@ a:hover {
 }
 
 .link-btn:hover {
-  background: transparent;  
+  background: white;  
   color: var(--logo-blue-color);
   box-shadow: 0px 15px 20px rgba(43, 50, 92, 0.15);
   transform: translateY(-7px);
@@ -146,7 +181,7 @@ a:hover {
 .link-btn-inverted {
   font-size: 20px;
   margin: 10px 15px 10px 0;
-  background: transparent;
+  background: white;
   border: 3px solid var(--logo-blue-color);
   color: var(--logo-blue-color);
   padding: 15px;
@@ -168,6 +203,10 @@ a:hover {
 
 a:hover .link-arrow {
   transform: translateX(3px);
+}
+
+.accordion {
+  margin-bottom: 2em;
 }
 
 .accordion details summary::-webkit-details-marker {
@@ -225,7 +264,7 @@ a:hover .link-arrow {
 }
 
 .accordion details[open] > summary {
-  color: var(--logo-orange-color);
+  color: var(--logo-gold-color);
 }
 
 /* .accordion details[open] {
@@ -314,7 +353,11 @@ a:hover .link-arrow {
   }
 
   #mission-statement-block {
-    margin-bottom: 3.5em !important;
+    /* margin-bottom: 3.5em !important; */
+  }
+
+  #mission-statement-block h1 {
+    width: 100%;
   }
 
   #mission-statement {
@@ -345,6 +388,7 @@ a:hover .link-arrow {
   }
 
   .page-title {
+    padding: 75px 50px 0;
     margin-bottom: 1.5em !important;  
   }
 
@@ -352,11 +396,8 @@ a:hover .link-arrow {
     margin-bottom: .4em;
   }
 
-  .page-container {
-    padding: 25px 50px 50px;
-  }
-
   .page-section {
+    padding: 0 50px 50px;
     margin-bottom: 1.5em !important;
   } 
 
@@ -371,20 +412,31 @@ a:hover .link-arrow {
 }
 
 @media screen and (max-width: 576px) {
+  h1 {
+    font-size: 30px !important;
+  }
+
+  .page-title h1 {
+    font-size: 50px !important; 
+  }
+
   .nav-container {
     padding: 0 12px 25px;
   }
 
-  .page-container {
-    padding: 12px 25px 25px;
+  .page-title {
+    padding: 60px 25px 0;
   }
 
-  .grid-container {
-    display: flex;
-    flex-wrap: wrap;
+  .page-section {
+    padding: 0 25px 25px;
   }
 
-  .grid-container > div {
+  .page-container > div {
     flex-basis: 100%;
+  }
+
+  .footer-container {
+    margin-top: 2.5rem;
   }
 }
