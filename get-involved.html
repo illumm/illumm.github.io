@@ -7,12 +7,11 @@
       <meta name="description" content="Illumm is a student-led organization that spreads awareness of the lack of importance of education in low-income communities.">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
       <link rel="stylesheet" href="style.css">      
-      <link rel="shortcut icon" type="image/png" href="images/illumm-logo.png">      
+      <link rel="shortcut icon" type="image/png" href="images/illumm-logo.png">     
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5KET8WH6X"></script>
       <script>
@@ -21,7 +20,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-W5KET8WH6X');
-      </script>     
+      </script>   
    </head>
 
    <body>
@@ -31,9 +30,15 @@
           <img src="images/illumm-logo-cropped.png">
         </a>    
         <div id="toggle-btn"><i class="fas fa-bars"></i></div>
-        <a class="nav-link" href="#">About Us</a>
-        <a class="nav-link" href="#">Our Programs</a>                        
-        <a class="nav-link" href="get-involved.html">Get Involved</a>   
+        <div class="nav-dropdown-container">
+          <a class="nav-link nav-dropdown-btn" href="#">About Us &nbsp<i class="fas fa-chevron-down"></i></a>
+          <div class="nav-dropdown-content">
+            <a class="nav-dropdown-link" href="#">Meet the Directors</a>
+            <a class="nav-dropdown-link" href="mailto:illumm855@gmail.com">Contact Us</a>
+          </div>            
+        </div>        
+        <a class="nav-link" href="#">Our Events</a>   
+        <a class="nav-link" href="get-involved.html">Get Involved</a>                     
     </header>
     <!--Page content-->
     <div class="page-container">
@@ -70,10 +75,12 @@
     <!--Footer-->
     <footer class="footer-container">
       <a class="footer-link" href="https://www.linkedin.com/company/illumm"><i class="fab fa-linkedin-in"></i></a>
+      <a class="footer-link" href="https://www.facebook.com/illumm.org"><i class="fab fa-facebook"></i></a>
       <a class="footer-link" href="https://twitter.com/illumm_org"><i class="fab fa-twitter"></i></a>
       <a class="footer-link" href="https://www.instagram.com/illumm_org/"><i class="fab fa-instagram"></i></a>
       <a class="footer-link" href="https://github.com/illumm/illumm.github.io"><i class="fab fa-github"></i></a>
       <a class="footer-link" href="https://discord.gg/snNuE3Cy5Z"><i class="fab fa-discord"></i></a>
+      <a class="footer-link" href="mailto:illumm855@gmail.com"><i class="fas fa-envelope"></i></a>
     </footer>
    </body>
    <script src="script.js"></script>

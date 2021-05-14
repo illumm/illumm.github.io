@@ -13,4 +13,17 @@ toggleNav = function() {
 }
 
 toggleBtn = document.getElementById('toggle-btn');
-toggleBtn.addEventListener("click", toggleNav)
+toggleBtn.addEventListener("click", toggleNav);
+
+function resizeNav() {
+    navLinks = document.querySelectorAll(".nav-container .nav-link");
+
+  if (window.pageYOffset > 33) {
+    document.querySelector("#nav-logo img").style.maxWidth = "10vw";
+  }
+  else {
+    document.querySelector("#nav-logo img").style.maxWidth = "15vw";
+  }
+}
+
+window.addEventListener("scroll", resizeNav);
