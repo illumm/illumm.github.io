@@ -16,9 +16,10 @@ toggleBtn = document.getElementById('toggle-btn');
 toggleBtn.addEventListener("click", toggleNav);
 
 function resizeNav() {
+    navHeight = document.querySelector(".nav-container").clientHeight;
     navLinks = document.querySelectorAll(".nav-container .nav-link");
 
-  if (window.pageYOffset > 33) {
+  if (window.pageYOffset >= navHeight) {
     document.querySelector("#nav-logo img").style.maxWidth = "10vw";
   }
   else {

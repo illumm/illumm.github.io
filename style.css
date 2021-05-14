@@ -76,7 +76,7 @@ a:hover {
   max-width: 15vw;
   min-width: 180px;
   height: auto;
-  transition: max-width .5s ease;
+  transition: max-width .5s ease, width 1s ease;
 }
 
 #toggle-btn {
