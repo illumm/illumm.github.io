@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="page-container">
+  <div class="page-title">
+    <h1 class="animate__animated animate__fadeIn">Illumm Blog</h1>  
+    <p>Find informative articles here in the future!</p>      
+  </div>
+  <div class="page-section">
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
