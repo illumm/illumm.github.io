@@ -401,6 +401,42 @@ a:hover .link-arrow {
   color: rgb(127, 150, 255) !important;
 }
 
+/* Toggle nav */
+@media screen and (max-width: 980px) {
+  #toggle-btn {
+    display: block;
+    margin: 10px;
+    transition: color .5s ease;
+  }
+
+  #toggle-btn.active {
+    color: white;
+  }
+
+  .nav-container .nav-link {
+    display: none;    
+    padding: 10px;
+  }
+
+  .nav-container {
+    padding: 0 25px 25px;
+    flex-direction: column;    
+  }
+
+  #nav-logo {
+    margin: 0;
+    flex-basis: 100%;
+  }
+
+  .nav-dropdown-btn {
+    text-align: center;
+  }
+
+  .nav-dropdown-content {
+    position: static;
+  }
+}
+
 /* Adjust styles for small (width < 768px) and extra-small screens (width < 576px) */
 @media screen and (max-width: 768px) {
   h1 {
@@ -427,29 +463,6 @@ a:hover .link-arrow {
     font-size: 18px;
   }
 
-  .nav-container .nav-link {
-    display: none;    
-    padding: 10px;
-  }
-
-  .nav-container {
-    padding: 0 25px 25px;
-    flex-direction: column;    
-  }
-
-  #nav-logo {
-    margin: 0;
-    flex-basis: 100%;
-  }
-
-  .nav-dropdown-btn {
-    text-align: center;
-  }
-
-  .nav-dropdown-content {
-    position: static;
-  }
-
   .page-title {
     padding: 75px 50px 0;
     margin-bottom: 1.5em !important;  
@@ -462,12 +475,7 @@ a:hover .link-arrow {
   .page-section {
     padding: 0 50px 50px;
     margin-bottom: 1.5em !important;
-  } 
-
-  #toggle-btn {
-    display: block;
-    margin: 10px;
-  }
+  }   
 
   .accordion  details > summary::before {
     margin-top: 0;

@@ -1,5 +1,6 @@
 toggleNav = function() {  
   navLinks = document.querySelectorAll(".nav-link");
+  document.getElementById("toggle-btn").classList.toggle("active");
 
   for(i = 0; i < navLinks.length; i++) {
     if(navLinks[i].style.display !== "block") {
