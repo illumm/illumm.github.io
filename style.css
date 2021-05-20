@@ -375,10 +375,51 @@ a:hover .link-arrow {
 
 .form-container {
   font-family: 'Lato', sans-serif;
+  padding: 60px 30px;
+  font-size: 20px;
+  display: flex; 
+  width: 70%;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 50px;
+  box-shadow: 0px 15px 20px rgba(43, 50, 92, 0.1);
+  background-color: var(--banner-bg-color);
+  text-align: center;
+  align-items: center;
 }
 
 .form-container label {
   display: block;
+}
+
+.form-container input, .form-container textarea {
+  height: 2em;
+  margin: 0 auto 3em;
+  border: none;
+  border-bottom: 2px solid var(--logo-blue-color);
+  width: 60%;
+  background-color: var(--banner-bg-color);
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.form-container textarea {
+  word-break: break-all;
+  height: 75px;
+  margin-bottom: 0;
+  resize: vertical;
+  padding-top: 10px;
+}
+
+.form-container input:focus, .form-container textarea:focus {
+  outline: none !important;
+  border-bottom: 4px var(--logo-blue-color) solid;
+}
+
+button {
+  display: block;
+  max-width: 200px;
 }
 
 /* .accordion details[open] {
