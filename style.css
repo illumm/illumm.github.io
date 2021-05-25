@@ -98,7 +98,7 @@ a:hover {
 }
 
 .nav-dropdown-btn i {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .nav-dropdown-content {
@@ -138,12 +138,18 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  overflow-x: clip;
 }
 
 .page-title {
   margin-bottom: 2em;  
   padding: 90px 100px 0;
-  flex-basis: 70%;
+  flex-basis: 100%;
+  background: url(images/wave.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 210px;
 }
 
 .page-title h1 {
@@ -151,6 +157,10 @@ a:hover {
   font-size: 80px;
   margin-top: 0;
   margin-bottom: .1em;
+}
+
+.page-title h1, .page-title p {
+  width: 70%;
 }
 
 .block {
@@ -422,10 +432,6 @@ button {
   max-width: 200px;
 }
 
-/* .accordion details[open] {
-  padding: 1rem 2rem;
-} */
-
 .accordion details[open] > summary ~ * {
   animation: open 1s ease;
 }
@@ -582,10 +588,15 @@ button {
   .page-title {
     padding: 75px 50px 0;
     margin-bottom: 1.5em !important;  
+    min-height: min-content;
   }
 
   .page-title h1 {
     margin-bottom: .4em;
+  }
+
+  .page-title h1, .page-title p {
+    width: auto;
   }
 
   .page-section {
@@ -638,7 +649,7 @@ button {
 
   .footer-container {
     margin-top: 2.5rem;
-    padding: 10px 50px;
+    padding: 10px 30px;
   }
 
   .footer-link {
