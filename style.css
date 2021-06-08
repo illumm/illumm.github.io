@@ -167,6 +167,23 @@ a:hover {
   padding: 30px;
 }
 
+#front-page-container::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3em;
+  background: url("images/front-page-art.svg");
+  background-size: 35% auto;
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+
 #mission-statement-block {
   position: relative;
   margin-bottom: 6em;
@@ -174,12 +191,12 @@ a:hover {
 }
 
 #mission-statement-block h1 {
-  width: 70%;
+  width: 65%;
 }
 
 #mission-statement-block::before {
   content: "";
-  z-index: -1;
+  z-index: -2;
   position: absolute;
   left: 0;
   top: 0;
@@ -193,7 +210,7 @@ a:hover {
 
 #mission-statement-block::after {
   content: "";
-  z-index: -1;
+  z-index: -2;
   position: absolute;
   left: 0;
   height: 100%;
@@ -556,6 +573,10 @@ button {
   .program-card {
     flex-basis: 100%;
     margin: 0 1em 3em;
+  }
+  #front-page-container::before {
+    background: none;
+    visibility: hidden;
   }
 }
 
