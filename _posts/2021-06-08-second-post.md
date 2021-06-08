@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First Blog Post"
+title: "Second Blog Post"
 author: "illumm Team"
 image: /images/illumm-logo.png
 ---

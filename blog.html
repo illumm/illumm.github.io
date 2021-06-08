@@ -8,12 +8,18 @@ layout: default
     <p>Find informative articles here in the future!</p>      
   </div>
   <div class="page-section">
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
+    <div class="blog-container">
+      {% for post in site.posts %}      
+        <a href="{{ post.url }}">
+          <div class="blog-card">
+            <div class="post-image" style="background: url('{{ post.image }}'); background-position: center; background-size: cover;"></div>
+            <div class="post-desc">
+              <h3>{{ post.title }}</h3>
+              <h3>{{ post.author }}</h3>
+            </div>            
+          </div>
+        </a>
       {% endfor %}
-    </ul>
+    </div>    
   </div>
 </div>
