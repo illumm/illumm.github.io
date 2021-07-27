@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "A Few Fun Facts About Sports Medicine"
-author: "illumm Team"
 image: /images/blog/2021/july/sports-medicine-facts.png
+date: 2021-07-23
 ---
 
 Sports medicine is not reserved for elite athletes; anyone who participates in any recreational sports can utilize knowledge of sports medicine. Sports medicine is a sector of orthopedic medicine that deals with injuries and health realated to sports and exercise.

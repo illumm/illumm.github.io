@@ -23,7 +23,7 @@ layout: front-page
       <div class="section-title">
         <h1>Latest Posts</h1>   
         <div class="blog-container">
-          {% for post in site.posts %}      
+          {% for post in site.posts limit:4 %}      
             <a href="{{ post.url }}">
               <div class="blog-card">
                 <div class="post-image" style="background: url('{{ post.image }}'); background-position: bottom; background-size: cover;"></div>

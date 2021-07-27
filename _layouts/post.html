@@ -46,10 +46,10 @@
     <!--Page content-->
     <div class="page-container">
       <div class="page-title">
-        <h1 class="animate__animated animate__fadeIn">{{ page.title }}</h1>             
+        <h1 class="animate__animated animate__fadeIn">{{ page.title }}</h1>  
+        <h2 class="post-byline">Posted {{ page.date | date: '%B %d, %Y' }}</h2>           
       </div>
-      <div class="page-section post-content">        
-        <h1 class="post-byline">Posted {{ page.date | date: '%B %d, %Y' }}</h1>
+      <div class="page-section post-content">                
         {{ content }}
       </div>
     </div>   
