@@ -23,7 +23,6 @@ h1 {
 
 h2 {
   font-size: 35px;
-  margin: 0;
 }
 
 a {
@@ -42,7 +41,7 @@ p {
 }
 
 a:hover {
-  color: rgb(127, 150, 255);
+  color: rgb(65, 72, 112);
 }
 
 /* Navbar */
@@ -167,23 +166,6 @@ a:hover {
   padding: 30px;
 }
 
-#front-page-container::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 20%;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 3em;
-  background: url("images/front-page-art.svg");
-  background-size: 35% auto;
-  background-position-x: right;
-  background-repeat: no-repeat;
-}
-
 #mission-statement-block {
   position: relative;
   margin-bottom: 6em;
@@ -242,7 +224,7 @@ a:hover {
   background: #f4eabe;
 } */
 
-#name-block {
+.blurb-box {
   box-shadow: 0px 15px 20px rgba(43, 50, 92, 0.1);
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50px;  
@@ -526,28 +508,33 @@ button {
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: 3em;
 }
 
-.blog-card {
+/* .blog-container a {
   flex-basis: 25%;
+} */
+
+.blog-card {
+  width: inherit;
   box-shadow: 0px 15px 20px rgba(43, 50, 92, 0.1);
   background-color: var(--banner-bg-color);
-  border-radius: 50px; 
+  border-radius: 40px; 
   transition: background-color .5s ease, transform 1s ease;
-  margin: 0 2em 2em 0;
-  width: 300px;
+  margin-bottom: 2em;
   position: relative;
+  box-sizing: border-box;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   background-color: transparent;
 }
 
 .blog-card .post-image {
-  height: 200px;
+  height: 320px;
   width: 100%;
-  border-radius: 50px 50px 0 0;  
+  border-radius: 40px 40px 0 0;  
 }
 
 .blog-card .post-desc {
@@ -557,6 +544,14 @@ button {
 /* Blog posts */
 .post-content p {
   width: 80%;
+}
+
+.post-content h2 {
+  padding-top: 15px;
+}
+
+.post-byline {
+  font-family: 'Moon Time', sans-serif;
 }
 
 .footer-container .footer-link:hover {
@@ -612,10 +607,6 @@ button {
   .program-card {
     flex-basis: 100%;
     margin: 0 1em 3em;
-  }
-  #front-page-container::before {
-    background: none;
-    visibility: hidden;
   }
 }
 
@@ -679,7 +670,10 @@ button {
 
   .blog-container {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .post-content p {
+    width: auto;
   }
 }
 

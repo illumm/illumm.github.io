@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Second Blog Post"
+title: "A Few Fun Facts About Sports Medicine"
 author: "illumm Team"
-image: /images/illumm-logo.png
+image: /images/blog/2021/july/sports-medicine-facts.png
 ---
 
-Welcome! 
+Sports medicine is not reserved for elite athletes; anyone who participates in any recreational sports can utilize knowledge of sports medicine. Sports medicine is a sector of orthopedic medicine that deals with injuries and health realated to sports and exercise.
 
-You made it to our blog! 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## How to become a sports doctor
+Sports doctors don't only work to heal injuries, but also work to prevent them. The average salary of a sports doctor is $239,595 per year. To become a sports doctor, one must attain an M.D. and complete two years of a sports medicine fellowship.

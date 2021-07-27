@@ -11,7 +11,7 @@ layout: front-page
     <!-- <img src="images/front-page-art.svg" style="float: right; max-width: 600px;"> -->
   </div>
   <div class="page-section-small">
-    <div class="block" id="name-block">
+    <div class="block blurb-box">
       <div class="section-title">
         <h1 class="animate__animated animate__fadeIn">Why are we called illumm?</h1>        
       </div>
@@ -19,9 +19,30 @@ layout: front-page
     </div>    
   </div>  
   <div class="page-section">
+    <div class="block">
+      <div class="section-title">
+        <h1>Latest Posts</h1>   
+        <div class="blog-container">
+          {% for post in site.posts %}      
+            <a href="{{ post.url }}">
+              <div class="blog-card">
+                <div class="post-image" style="background: url('{{ post.image }}'); background-position: bottom; background-size: cover;"></div>
+                <div class="post-desc">
+                  <h3>{{ post.title }}</h3>
+                </div>            
+              </div>
+            </a>
+          {% endfor %}
+        </div>    
+      </div>
+    </div>
+    
+  </div>      
+</div>   
+  <div class="page-section">
     <div class="block" id="programs-block">
       <div class="section-title">
-        <h1 class="animate__animated animate__fadeIn">Upcoming Events</h1>
+        <h1>Upcoming Events</h1>
         <p>Join us for upcoming webinars and workshops!</p>
       </div>      
       <div class="programs-container">
@@ -42,5 +63,4 @@ layout: front-page
         </div>
       </div>
     </div>    
-  </div>        
-</div>     
+  </div>    
