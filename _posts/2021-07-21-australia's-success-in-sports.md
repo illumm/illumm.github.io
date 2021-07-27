@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Story Behind Austrialia's Success in Sports"
-image: /images/blog/2021/july/australia-sports.png
+image: /images/blog-images/2021/july/australia-sports.png
 date: 2021-07-21
 ---
 
