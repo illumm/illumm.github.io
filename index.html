@@ -21,46 +21,71 @@ layout: front-page
   <div class="page-section">
     <div class="block">
       <div class="section-title">
-        <h1>Latest Posts</h1>   
-        <div class="blog-container">
-          {% for post in site.posts limit:4 %}      
+        <h1>Latest Posts</h1>       
+      </div>
+      <div class="blog-container">
+        {% for post in site.posts %}      
+          {% if post.topic == "Sports Medicine" %}
             <a href="{{ post.url }}">
               <div class="blog-card">
                 <div class="post-image" style="background: url('{{ post.image }}'); background-position: bottom; background-size: cover;"></div>
                 <div class="post-desc">
                   <h3>{{ post.title }}</h3>
+                  <span class="post-tag"><h3>{{ post.topic }}</h3></span>
                 </div>            
               </div>
             </a>
-          {% endfor %}
-        </div>    
-      </div>
+          {% endif %}
+        {% endfor %}
+      </div>    
     </div>
-    
-  </div>      
-</div>   
+  </div> 
   <div class="page-section">
-    <div class="block" id="programs-block">
+    <div class="block">
       <div class="section-title">
-        <h1>Upcoming Events</h1>
-        <p>Join us for upcoming webinars and workshops!</p>
-      </div>      
-      <div class="programs-container">
-        <div class="program-card">
-          <p><b>"Let's Talk About Mental Health" Guest Speaker Event</b></p>
-          <p>May 22nd, 11:00 AM PST</p>
-          <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfO5jFduw8tSb4jOd1gt8L4x46YIoSjfvlnmrMnmTleZYt2Ug/viewform">Sign up <i class="fas fa-arrow-circle-right link-arrow"></i></a></p>
-        </div>
-        <div class="program-card">
-          <p><b>Coming soon</b></p>
-          <p>--</p>
-          <p><a target="_blank" href="#">Sign up <i class="fas fa-arrow-circle-right link-arrow"></i></a></p>
-        </div>
-        <div class="program-card">
-          <p><b>Coming soon</b></p>
-          <p>--</p>
-          <p><a target="_blank" href="#">Sign up <i class="fas fa-arrow-circle-right link-arrow"></i></a></p>
-        </div>
+        <h1>Past Events</h1>
       </div>
-    </div>    
-  </div>    
+      <div class="blog-container">
+        {% for post in site.posts %}      
+          {% if post.topic == "Event" %}
+            <a href="{{ post.url }}">
+              <div class="blog-card">
+                <div class="post-image" style="background: url('{{ post.image }}'); background-position: bottom; background-size: cover;"></div>
+                <div class="post-desc">
+                  <h3>{{ post.title }}</h3>
+                  <span class="post-tag"><h3>{{ post.topic }}</h3></span>
+                </div>            
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>    
+    </div>
+  </div>
+  <!-- <div class="page-section">
+      <div class="block">
+        <div class="section-title">
+          <h1>Upcoming Events</h1>
+          <p>Join us for upcoming webinars and workshops!</p>
+        </div>      
+        <div class="programs-container">
+          <div class="program-card">
+            <p><b>"Let's Talk About Mental Health" Guest Speaker Event</b></p>
+            <p>May 22nd, 11:00 AM PST</p>
+            <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfO5jFduw8tSb4jOd1gt8L4x46YIoSjfvlnmrMnmTleZYt2Ug/viewform">Sign up <i class="fas fa-arrow-circle-right link-arrow"></i></a></p>
+          </div>
+          <div class="program-card">
+            <p><b>Coming soon</b></p>
+            <p>--</p>
+            <p><a target="_blank" href="#">Sign up <i class="fas fa-arrow-circle-right link-arrow"></i></a></p>
+          </div>
+          <div class="program-card">
+            <p><b>Coming soon</b></p>
+            <p>--</p>
+            <p><a target="_blank" href="#">Sign up <i class="fas fa-arrow-circle-right link-arrow"></i></a></p>
+          </div>
+        </div>
+      </div>    
+    </div>   -->     
+</div>   
+  

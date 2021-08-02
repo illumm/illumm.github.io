@@ -38,7 +38,7 @@
       </div>                -->
       <a class="nav-link" href="#">About Us</a>
       <a class="nav-link" href="#">Our Events</a> 
-      <a class="nav-link" href="{{ site.baseurl }}/blog.html">Blog</a> 
+      <a class="nav-link" href="{{ site.baseurl }}/monthly-topics.html">Monthly Topics</a> 
       <a class="nav-link" href="{{ site.baseurl }}/get-involved.html">Get Involved</a>   
       <a class="nav-link" href="{{ site.baseurl }}/contact-us.html">Contact Us</a>                   
     </header>
@@ -47,7 +47,9 @@
     <div class="page-container">
       <div class="page-title">
         <h1 class="animate__animated animate__fadeIn">{{ page.title }}</h1>  
-        <h2 class="post-byline">Posted {{ page.date | date: '%B %d, %Y' }}</h2>           
+        <h2 class="post-byline">Posted {{ page.date | date: '%B %d, %Y' }}</h2>    
+        {% assign topic = site.topics | where: 'title', page.topic | first %}  
+        <a href="{{ topic.url }}"><span class="post-tag" style="margin-bottom: 2em;"><h3>{{ topic.title }}</h3></span> </a>    
       </div>
       <div class="page-section post-content">                
         {{ content }}

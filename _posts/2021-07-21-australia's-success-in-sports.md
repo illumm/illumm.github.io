@@ -2,6 +2,7 @@
 layout: post
 title: "The Story Behind Austrialia's Success in Sports"
 image: /images/blog-images/2021/july/australia-sports.PNG
+topic: "Sports Medicine"
 date: 2021-07-21
 ---
 

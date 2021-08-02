@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="page-container">
+  <div class="page-title" class="wave-container">
+    <h1 class="animate__animated animate__fadeIn">illumm Monthly Topics</h1>      
+  </div>
+  <div class="page-section">
+    <div class="blog-container">
+      {% for post in site.posts %}  
+        {% if post.topic != "Event" %} 
+          <a href="{{ post.url }}">
+            <div class="blog-card">
+              <div class="post-image" style="background: url('{{ post.image }}'); background-position: bottom; background-size: cover;"></div>
+              <div class="post-desc">
+                <h3>{{ post.title }}</h3>
+                <span class="post-tag"><h3>{{ post.topic }}</h3></span>
+              </div>            
+            </div>
+          </a> 
+        {% endif %}    
+      {% endfor %}
+    </div>  
+  </div>
+</div>

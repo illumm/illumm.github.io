@@ -21,15 +21,13 @@
 
         gtag('config', 'G-W5KET8WH6X');
       </script>   
-      <!-- Google search console verification (only needed on home page) -->    
-      <meta name="google-site-verification" content="6juNxkekfGrPsnNoNmKUGyD-GL-Vkjt72PT2GNdAd5g" />
    </head>
 
    <body>
     <!--Header-->
       <header class="nav-container">
-      <a href="index.html" id="nav-logo">
-        <img src="images/illumm-logo-cropped.png">
+      <a href="{{ site.baseurl }}/index.html" id="nav-logo">
+        <img src="{{ site.baseurl }}/images/illumm-logo-cropped.png">
       </a>    
       <div id="toggle-btn"><i class="fas fa-bars"></i></div>
       <!-- <div class="nav-dropdown-container">
@@ -39,14 +37,35 @@
         </div>            
       </div>                -->
       <a class="nav-link" href="#">About Us</a>
-      <a class="nav-link" href="#">Our Events</a>  
-      <a class="nav-link" href="monthly-topics.html">Monthly Topics</a>  
-      <a class="nav-link" href="get-involved.html">Get Involved</a>   
-      <a class="nav-link" href="contact-us.html">Contact Us</a>                   
+      <a class="nav-link" href="#">Our Events</a> 
+      <a class="nav-link" href="{{ site.baseurl }}/monthly-topics.html">Monthly Topics</a> 
+      <a class="nav-link" href="{{ site.baseurl }}/get-involved.html">Get Involved</a>   
+      <a class="nav-link" href="{{ site.baseurl }}/contact-us.html">Contact Us</a>                   
     </header>
 
     <!--Page content-->
-    {{ content }}
+    <div class="page-container">
+      <div class="page-title">
+        <h1 class="animate__animated animate__fadeIn">{{ page.title }}</h1>           
+      </div>
+      <div class="page-section">                
+        <div class="blog-container">
+          {% for post in site.posts %}  
+            {% if post.topic == page.title %}  
+              <a href="{{ post.url }}">
+                <div class="blog-card">
+                  <div class="post-image" style="background: url('{{ post.image }}'); background-position: bottom; background-size: cover;"></div>
+                  <div class="post-desc">
+                    <h3>{{ post.title }}</h3>
+                    <span class="post-tag"><h3>{{ post.topic }}</h3></span>
+                  </div>            
+                </div>
+              </a>
+            {% endif %} 
+          {% endfor %}
+        </div>
+      </div>
+    </div>   
 
     <!--Footer-->
     <footer class="footer-container">
@@ -58,6 +77,6 @@
       <a class="footer-link" href="https://discord.gg/snNuE3Cy5Z"><i class="fab fa-discord"></i></a>
       <a class="footer-link" href="mailto:illumm855@gmail.com"><i class="fas fa-envelope"></i></a>
     </footer>
- </body>
+</body>
  <script src="{{ site.baseurl }}/script.js"></script>
 </html>

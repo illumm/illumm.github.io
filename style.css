@@ -511,7 +511,8 @@ button {
 }
 
 .blog-container a {
-  flex-basis: 50%;
+  flex-basis: auto;
+  flex-grow: 1;
   box-sizing: border-box;
 }
 
@@ -550,6 +551,29 @@ button {
 
 .post-byline {
   font-family: 'Moon Time', sans-serif;
+}
+
+.post-tag {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  display: inline-block;
+  border: 2px solid var(--logo-orange-color);
+  transition: background-color .5s ease, color .5s ease, transform .5s ease;
+}
+
+.post-tag:hover {
+  background-color: var(--logo-orange-color);
+  transform: translateY(-5px);
+}
+
+.post-tag h3 {
+  display: inline;
+  color: var(--logo-orange-color);
+}
+
+.post-tag:hover h3 {
+  color: whitesmoke;
 }
 
 .footer-container .footer-link:hover {

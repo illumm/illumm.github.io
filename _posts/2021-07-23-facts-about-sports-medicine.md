@@ -2,6 +2,7 @@
 layout: post
 title: "A Few Fun Facts About Sports Medicine"
 image: /images/blog-images/2021/july/sports-medicine-facts.PNG
+topic: "Sports Medicine"
 date: 2021-07-23
 ---
 

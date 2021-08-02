@@ -1,2 +1,7 @@
 exclude:
   - .jekyll-cache
+
+collections: 
+  topics: 
+    title: Topics
+    output: true
