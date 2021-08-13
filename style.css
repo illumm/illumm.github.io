@@ -40,6 +40,17 @@ p {
   word-wrap: break-word;
 }
 
+li {
+  font-size: 20px;
+}
+
+ul {
+  padding: 15px;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 a:hover {
   color: rgb(65, 72, 112);
 }
@@ -511,7 +522,7 @@ button {
 }
 
 .blog-container a {
-  flex-basis: auto;
+  flex-basis: 50%;
   flex-grow: 1;
   box-sizing: border-box;
 }
@@ -634,6 +645,10 @@ button {
   .blog-container {
     padding-top: 0;
   }
+
+  .blog-card {
+    flex-basis: auto;
+  }
 }
 
 /* Adjust styles for small (width < 768px) and extra-small screens (width < 576px) */
@@ -658,7 +673,7 @@ button {
     font-size: 20px;
   }
 
-  p {
+  p, li {
     font-size: 18px;
   }
 
