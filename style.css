@@ -523,7 +523,6 @@ button {
 
 .blog-container a {
   flex-basis: 50%;
-  flex-grow: 1;
   box-sizing: border-box;
 }
 
