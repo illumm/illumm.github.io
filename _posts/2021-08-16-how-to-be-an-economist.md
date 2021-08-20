@@ -12,5 +12,6 @@ Economits usually have a master’s degree or MBA of 2 years. An MBA provides bu
 
 Those interested in the private sector looks for major metropolitan areas for opportunities with employers. The American Economic Association's Job Openings for Economists Network helps economists find jobs and build their career. One can consider a PhD for four to seven years which provides worldwide job options. The late stages of an economist’s career involves joining professional societies and achieving certificates.
 
-## Sources 
+## Sources
+
 [BSchools.org](https://www.bschools.org/faq/how-to-become-an-economist)
